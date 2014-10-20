@@ -1,0 +1,15 @@
+plan:
+- first
+- second
+
+profiles:
+  first:
+    environment:
+      MY_PROFILE: "first"
+    tests:
+    - '[ "$MY_PROFILE" == "first" ]'
+  second:
+    environment:
+      MY_PROFILE: "second"
+    tests:
+    - '[ "$MY_PROFILE" == "second" ]'
