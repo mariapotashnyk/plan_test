@@ -1,5 +1,5 @@
 java:
-  java_version: "java-6-oracle-u25"
+  java_version: "java-6-oracle"
 
 plan:
 - default
