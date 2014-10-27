@@ -10,6 +10,8 @@ profiles:
     environment:
       MY_PROFILE: "first"
     tests:
+    - 'which java'
+    - 'echo $JAVA_HOME'
     - '[ "$MY_PROFILE" == "first" ]'
   second:
     environment:
