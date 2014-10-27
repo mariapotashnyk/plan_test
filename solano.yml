@@ -12,6 +12,7 @@ profiles:
     tests:
     - 'which java'
     - 'echo $JAVA_HOME'
+    - 'echo $PATH'
     - '[ "$MY_PROFILE" == "first" ]'
     - 'java -version'
   second:
