@@ -3,7 +3,7 @@ java:
 
 plan:
 - first
-- second
+#- second
 
 profiles:
   first:
@@ -13,6 +13,7 @@ profiles:
     - 'which java'
     - 'echo $JAVA_HOME'
     - '[ "$MY_PROFILE" == "first" ]'
+    - 'java -version'
   second:
     environment:
       MY_PROFILE: "second"
