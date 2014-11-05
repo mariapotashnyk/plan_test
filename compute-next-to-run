@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+next_profile = %w(first second third).sample
+
+puts "choosing #{next_profile}"
+
+File.open("solano-plan-variables.json", "w") do |f|
+  f.write(JSON.dump({"next_profile" => next_profile}))
+end

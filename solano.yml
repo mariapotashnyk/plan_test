@@ -1,22 +1,24 @@
-java:
-  java_version: "java-8-oracle"
-
 plan:
-- default
-#- second
+- profile: default
+  sets: next_profile
+- profile: "{{ next_profile }}"
 
 profiles:
   default:
+    tests: 
+    - "./compute-next-to-run"
+  first:
     environment:
       MY_PROFILE: "first"
     tests:
-    - 'which java'
-    - 'echo $JAVA_HOME'
-    - 'echo $PATH'
     - '[ "$MY_PROFILE" == "first" ]'
-    - 'java -version'
   second:
     environment:
       MY_PROFILE: "second"
     tests:
     - '[ "$MY_PROFILE" == "second" ]'
+  third:
+    environment:
+      MY_PROFILE: "third"
+    tests:
+    - '[ "$MY_PROFILE" == "third" ]'
