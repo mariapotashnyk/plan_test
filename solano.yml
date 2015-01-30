@@ -6,10 +6,10 @@ profiles:
   first:
     environment:
       MY_PROFILE: "first"
-    tests:
-    - '[ "$MY_PROFILE" == "first" ]'
+    test_pattern:
+      - test/*_test.rb
   second:
     environment:
       MY_PROFILE: "second"
-    tests:
-    - '[ "$MY_PROFILE" == "second" ]'
+    test_pattern:
+      - spec/*_spec.rb
