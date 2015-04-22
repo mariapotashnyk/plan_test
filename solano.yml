@@ -1,6 +1,7 @@
 plan:
-- first
-- second
+  - profile: first
+    sets: next_variable
+  - second
 
 profiles:
   first:
@@ -8,8 +9,10 @@ profiles:
       MY_PROFILE: "first"
     tests:
     - '[ "$MY_PROFILE" == "first" ]'
+    - 'echo "{\"next_variable\": \"abcdef\"}" > solano-plan-variables.json'
   second:
     environment:
       MY_PROFILE: "second"
     tests:
     - '[ "$MY_PROFILE" == "second" ]'
+    - '[ "$next_variable" == "abcdef" ]'
