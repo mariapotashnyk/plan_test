@@ -3,7 +3,7 @@ plan:
     sets: next_variable
   - second
 
-worker_limit: 8
+worker_limit: 6
 
 profiles:
   first:
