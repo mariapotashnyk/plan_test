@@ -3,10 +3,13 @@ plan:
     sets: next_variable
   - second
 
+worker_limit: 8
+
 profiles:
   first:
     resource_pools:
       - sample_pool
+    worker_limit: 2
     environment:
       MY_PROFILE: "first"
     tests:
