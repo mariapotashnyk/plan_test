@@ -17,5 +17,6 @@ profiles:
     environment:
       MY_PROFILE: "second"
     tests:
+    - 'echo $SAMPLE_POOL'
     - '[ "$MY_PROFILE" == "second" ]'
     - '[ "$next_variable" == "abcdef" ]'
