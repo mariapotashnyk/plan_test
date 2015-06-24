@@ -10,6 +10,7 @@ profiles:
     environment:
       MY_PROFILE: "first"
     tests:
+    - 'echo $SAMPLE_POOL'
     - '[ "$MY_PROFILE" == "first" ]'
     - 'echo "{\"next_variable\": \"abcdef\"}" > solano-plan-variables.json'
   second:
