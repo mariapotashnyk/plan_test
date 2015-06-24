@@ -6,7 +6,7 @@ plan:
 profiles:
   first:
     resource_pools:
-      - sample_pool
+      - sample-pool
     environment:
       MY_PROFILE: "first"
     tests:
