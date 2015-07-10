@@ -9,6 +9,7 @@ notify:
       - committers
       - admins
   - channel: hipchat
+    room: 43378
 
 
 profiles:
