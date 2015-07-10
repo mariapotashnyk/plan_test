@@ -11,18 +11,14 @@ notify:
 
 profiles:
   first:
-    resource_pools:
-      - sample-pool
     environment:
       MY_PROFILE: "first"
     tests:
-    - 'echo $SAMPLE_POOL'
     - '[ "$MY_PROFILE" == "first" ]'
     - 'echo "{\"next_variable\": \"abcdef\"}" > solano-plan-variables.json'
   second:
     environment:
       MY_PROFILE: "second"
     tests:
-    - 'echo $SAMPLE_POOL'
     - '[ "$MY_PROFILE" == "second" ]'
     - '[ "$next_variable" == "abcdef" ]'
