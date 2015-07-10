@@ -3,6 +3,12 @@ plan:
     sets: next_variable
   - second
 
+notify:
+  - channel: email
+    recipients:
+      - committers
+      - admins
+
 profiles:
   first:
     resource_pools:
