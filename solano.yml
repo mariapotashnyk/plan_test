@@ -8,6 +8,8 @@ notify:
     recipients:
       - committers
       - admins
+  - channel: hipchat
+
 
 profiles:
   first:
