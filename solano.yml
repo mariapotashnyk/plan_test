@@ -6,10 +6,16 @@ profiles:
   first:
     environment:
       MY_PROFILE: "first"
-    test_pattern:
-      - test/*_test.rb
+    script: bin/test
+    tests:
+      - bin/first
+    profile_config:
+      advance_on: 'always'
   second:
     environment:
       MY_PROFILE: "second"
-    test_pattern:
-      - spec/*_spec.rb
+    script: bin/test
+    tests:
+      - bin/second
+    profile_config:
+      advance_on: 'always'
